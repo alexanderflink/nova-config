@@ -1,0 +1,40 @@
+{
+  "clips" : [
+    {
+      "children" : [
+        {
+          "content" : "import React from 'react'\nimport PropTypes from 'prop-types'\nimport classnames from 'classnames'\nimport classes from '.\/${0:Component}.styles.module.scss'\n\nfunction ${0:Component}(props) {\n  const { children, className } = props\n\n  return <div className={classnames(classes.root, className)}>${1:\\{children\\}}<\/div>\n}\n\n${0:Component}.propTypes = {\n  children: PropTypes.node.isRequired,\n  className: PropTypes.string,\n}\n\nexport default ${0:Component}\n",
+          "name" : "React functional component",
+          "trigger" : "React functional component"
+        },
+        {
+          "content" : "import React from 'react'\nimport PropTypes from 'prop-types'\nimport classnames from 'classnames'\nimport { makeStyles } from '@material-ui\/core\/styles'\n\nexport const useStyles = makeStyles((theme) => ({\n  root: {},\n}))\n\nfunction ${0:Component}(props) {\n  const { children, className, ...other } = props\n  const classes = useStyles()\n\n  return (\n\t<div className={classnames(classes.root, className)} {...other}>\n\t  {children}\n\t<\/div>\n  )\n}\n\n${0:Component}.propTypes = {\n  children: PropTypes.node.isRequired,\n  className: PropTypes.string,\n}\n\nexport default ${0:Component}\n\n",
+          "name" : "React JSS component",
+          "trigger" : "React JSS component"
+        }
+      ],
+      "name" : "React"
+    },
+    {
+      "content" : "React.useCallback(() => {\n\t$0\n}, [])",
+      "name" : "React.useCallback",
+      "scope" : "editor",
+      "syntax" : "jsx",
+      "trigger" : "React.useCallback"
+    },
+    {
+      "content" : "React.useEffect(() => {\n\t$0\n}, [])",
+      "name" : "React.useEffect",
+      "scope" : "editor",
+      "syntax" : "jsx",
+      "trigger" : "React.useEffect"
+    },
+    {
+      "content" : "#!\/usr\/bin\/env bash",
+      "name" : "shebang",
+      "scope" : "editor",
+      "syntax" : "shell",
+      "trigger" : "shebang"
+    }
+  ]
+}
